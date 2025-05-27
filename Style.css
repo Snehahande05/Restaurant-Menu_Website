@@ -1,0 +1,236 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    color: #fff;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    background-color: #fef3c7;
+    color: #c2410c;
+  }
+  
+  /* Welcome Section */
+  .welcome-banner {
+    text-align: center;
+    padding: 200px 20px;
+    background-image: url("images/Background.png");
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    height: 700px;
+  }
+  
+  .welcome-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .welcome-banner h1,
+  .welcome-banner p {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .welcome-banner h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    color: #fff9db;
+  }
+  
+  .welcome-banner p {
+    font-size: 1.5em;
+    color: #ffecc7;
+  }
+  
+  /* Menu Section */
+  .menu-section {
+    padding: 60px 20px;
+    background-color: #fff7ed;
+  }
+  
+  .menu-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #b45309;
+    margin-bottom: 40px;
+  }
+  
+  .menu-category {
+    margin-bottom: 50px;
+  }
+  
+  .menu-category h3 {
+    color: #d97706;
+    margin-bottom: 15px;
+    border-left: 6px solid #f59e0b;
+    padding-left: 12px;
+    font-size: 1.5em;
+  }
+  
+  .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background: #fff;
+    border: none;
+    width: calc(50% - 20px);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+  
+  .info {
+    padding: 15px;
+  }
+  
+  .info h4 {
+    font-size: 1.2em;
+    color: #b45309;
+  }
+  
+  .info p {
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #9333ea;
+    margin-top: 8px;
+  }
+  
+  .badge {
+    background-color: #fde68a;
+    color: #92400e;
+    font-size: 0.8em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 8px;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 50px 20px;
+    background-color: #fef3c7;
+    text-align: center;
+  }
+  
+  .about h2 {
+    color: #92400e;
+    margin-bottom: 20px;
+    font-size: 2em;
+  }
+  
+  .about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.05em;
+    color: #5b3214;
+  }
+  
+  /* Location Section */
+  .location {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .location h2 {
+    color: #92400e;
+    margin-bottom: 10px;
+    font-size: 2em;
+  }
+  
+  .location p {
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border: none;
+    border-radius: 12px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu-items {
+      flex-direction: column;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      background-color: #fbbf24;
+      gap: 10px;
+      padding: 10px 0;
+    }
+  }
+  
